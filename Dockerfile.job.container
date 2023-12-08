@@ -1,0 +1,4 @@
+FROM centos
+COPY release/go-k8s-job-example /data/service/go-k8s-job-example
+WORKDIR /data/service
+CMD ["./go-k8s-job-example"]
