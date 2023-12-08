@@ -92,7 +92,7 @@ func (j *job) Run(name, ns, image, cmd string, args []string) error {
 
 func getContainers(name, image, cmd string, args []string) corev1.Container {
 	return corev1.Container{
-		Name:            "dimensity-job",
+		Name:            "job",
 		Image:           image,
 		Command:         []string{cmd},
 		Args:            args,

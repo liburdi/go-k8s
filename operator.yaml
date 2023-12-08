@@ -1,16 +1,16 @@
 apiVersion: v1
 kind: Pod
 metadata:
-  name: go-k8s-operator
-  namespace: default
+  name: operator
+  namespace: go-k8s-operator
 spec:
   containers:
-    - name: go-k8s-operator
-      image: liburdi/go-k8s-operator:0.1.0
+    - name: operator
+      image: liburdi/go-k8s-operator:0.1.1
       resources:
         requests:
           memory: "100Mi"
         limits:
           memory: "200Mi"
       command: [ "./go-k8s-operator" ]
-      args: [ "--image", "liburdi/go-k8s-job-example:0.1.0", "--name", "job-example-10" ]
+      args: [ "--image", "liburdi/go-k8s-job-example:0.1.1", "--name", "job-example-11" ]
